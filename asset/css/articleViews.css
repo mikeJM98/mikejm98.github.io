@@ -1,0 +1,419 @@
+.cell.articleDetailsView, .cell.articleListView, .articleGriddedCell.cell{
+	padding: 8px;
+	margin-bottom: 10px;
+	font-family: Arial;
+	text-shadow: none;
+}
+
+.cell.articleListView{
+	padding: 2px 5px;
+	margin: 0px;
+	margin-bottom: 4px;
+}
+
+.cell.articleDetailsView .row-fluid{
+}
+.articleDetailsTitle, .articleDetailsSummary{
+	margin-top: 0px;
+}
+.articleDetailsSummary p{
+	margin-bottom: 0;
+	font-size: 100%;
+	line-height: 140%;
+}
+.articleDetailsTitle h3 a{
+	color: #444444;
+	font-size: 90%;
+	text-shadow: none;
+	margin: 0;
+	
+}
+
+.articleDetailsBlock{
+	background-color: #969696;
+	color: #ffffff;
+	height: 30px;
+	text-shadow: none;
+	text-transform: uppercase;
+}
+.articleDetailsBlock.projects, .articleGriddedCat.projects{
+	background-color: #9e6436;
+}
+.articleDetailsBlock.tips, .articleGriddedCat.tips{
+	background-color: #366387;
+}
+.articleDetailsBlock.reviews, .articleGriddedCat.reviews{
+	background-color: #5a8859;
+}
+.articleDetailsBlock.just-fun, .articleGriddedCat.just-fun{
+	background-color: #4d0088;
+}
+.articleDetailsBlock.challenges, .articleGriddedCat.challenges{
+	background-color: #7f7449;
+}
+.articleDetailsBlock.how-to, .articleGriddedCat.how-to{
+	background-color: #7d2528;
+}
+.articleDetailsBlock.just-fun, .articleGriddedCat.just-fun{
+	background-color: #752d59;
+}
+.articleDetailsBlock .articleName{
+	padding-top: 5px;
+	text-align: center;
+	font-size: 120%;
+}
+
+
+.articleDetailsBlock .articleRating{
+	font-weight: bold;
+	font-size: 140%;
+	background-image: url('../img/starsSprite.png');
+	background-color: #969696;
+	background-repeat: no-repeat;
+	height: 30px;
+	background-position-x: 0px;
+}
+.articleDetailsBlock .articleRating .rating{
+	margin-top: 5px;
+}
+
+.articleDetailsBlock .articleRating.star0{
+	background-position-y: -122px;
+}
+.articleDetailsBlock .articleRating.star1{
+	background-position-y: -97px;
+}
+.articleDetailsBlock .articleRating.star2{
+	background-position-y: -72px;
+}
+.articleDetailsBlock .articleRating.star3{
+	background-position-y: -47px;
+}
+.articleDetailsBlock .articleRating.star4{
+	background-position-y: -22px;
+}
+.articleDetailsBlock .articleViews{
+	padding-top: 5px;
+	height: 100%;
+	width: 100%;
+	background: url('../img/eye.png') no-repeat 10% 45%;
+}
+.articleDetailsBlock .articleViews span{
+	font-size: 90%;
+}
+.articleDetailsBlock .articleDate{
+	padding-top: 5px;
+	height: 100%;
+	width: 100%;
+	background: url('../img/calendar.png') no-repeat 10% 30%;
+}
+.articleDetailsBlock .articleDate span{
+	font-size: 90%;
+}
+
+.articleDetailsBlock .articleInfluence{
+	padding-top: 5px;
+	text-align: center;
+	font-size: 110%;
+}
+.articleDetailsUserThumb img{
+	width: 80%;
+	margin: 10px 10%;
+}
+.articleDetailsUsername{
+	text-align: center;
+}
+.articleDetailsUsername a{
+	text-decoration: underline;
+	font-size: 90%;
+	color: #292f7c;
+	text-shadow: none;
+}
+
+.articleListView .user{
+	text-shadow: none;
+	font-weight: 400;
+}
+.articleListTitle{
+	margin-top: 0px;
+	font-size: 110%;
+}
+
+.articleListTitle h4 a{
+	color: #444444;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.articleGriddedCell.cell{
+		padding:8px;
+	position: relative;
+	margin-bottom:0px;
+}
+.articleGriddedCell.cell .articleGriddedTitle{
+	min-height: 50px;
+}
+.articleGriddedCell a{
+	color: #444444;
+	text-shadow: none;
+}
+.articleGriddedCell .author{
+	font-weight: bold;
+}
+.articleGriddedCat{
+	text-align: center;
+	text-shadow: none;
+	color: #ffffff;
+	border-radius: 10px;
+}
+.articleGriddedCell .articleName{
+}
+.articleListAuthorLabel{
+		margin: 0px 0px 0px;
+		 font-size: 70%;
+		 line-height:1.1em;
+	}
+.articleListAuthor{
+		margin: 0px; line-height: 1.1em; font-size: 80%
+	}
+.articleListAuthor .author{
+		color:#3c3c3c;
+		font-weight:bold;
+}
+
+
+
+
+
+
+/*
+	
+
+@media (max-width: 480px) {
+	.articleDetailsBlock{
+		width: 80%;
+		margin: 5px 10%;
+	}
+	.articleDetailsBlock .articleViews{
+		padding-top: 5px;
+		height: 100%;
+		width: 100%;
+		background: url('/img/eye.png') no-repeat 10% 45%;
+	}
+}
+@media(max-width:767px){
+	.articleDetailsBlock{
+		width: 80%;
+		margin: 5px 10%;
+	}
+	.articleDetailsThumb{
+		text-align: center;
+	}
+	.articleDetailsBlock .articleRating {
+		font-weight: bold;
+		font-size: 140%;
+		background-image: url('/img/starsSprite.jpg');
+		background-color: #B2B2B2;
+		background-repeat: no-repeat;
+		height: 30px;
+		background-position-x: 45%;
+	}
+	.articleRating{
+		text-align: center;
+	}
+	.articleRating .row-fluid .offset5{
+		margin-left: 0;
+	}
+	.articleDetailsContent{
+		width: 80%;
+		margin: 0 10%;
+		padding: 0;
+	}
+
+.articleDetailsUserThumb img {
+		width: 40%;
+		margin: 0 30%;
+	}
+	
+	.articleDetailsBlock .articleViews{
+		padding-top: 5px;
+		text-align: center;
+		height: 100%;
+		width: 100%;
+		background: url('/img/eye-small.png') no-repeat 30% 45%;
+	}
+	.articleDetailsBlock .articleViews span{		
+		font-size: 100%;
+	}
+	.articleDetailsBlock .articleDate {
+		text-align: center;
+		background-position-x: 30%;
+	}
+	.articleDetailsBlock .articleDate span{
+		font-size: 100%;
+	}
+	
+	.articleListView .articleListContent{
+		width:80%;
+		margin: 0 10%;
+	}
+	.featuredArticles{
+		padding-left: 2.5%;
+	}
+	.articleGriddedCell.cell{
+		width: 45%;
+		margin-right: 5%;
+		float: left;
+	}
+	.articleGriddedThumb{
+		
+	}
+	.articleGriddedThumb img{
+		width: 90%;
+		margin: 0 5%;
+	}
+	.articleGriddedTitle{
+		text-align: center;
+		font-size: 120%;
+		margin: 5px 0;
+	}
+	.articleGriddedUserThumb{
+		width: 30%;
+		float: left;
+	}
+	.articleGriddedUserThumb img{
+		width: 30%;
+	}
+	.articleListAuthorLabel{
+		margin: 0px 0px 0px;
+		 font-size: 70%;
+		 line-height:1.1em;
+	}
+	.articleListAuthor{
+		margin: 0px; line-height: 1.1em; font-size: 80%
+	}
+	.articleListAuthor .author{
+		color:#3c3c3c;
+		font-weight:bold;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+	.articleDetailsBlocks{
+		width: 70px;
+	}
+	
+	.articleDetailsBlock .articleRating{
+		font-weight: bold;
+		font-size: 140%;
+		background-image: none;
+		background-color: #b2b2b2;
+		background-repeat: no-repeat;
+		height: 30px;
+		background-position-x: 0px;
+	}
+	.articleDetailsBlock .articleRating .offset5{
+		margin-left: 8px;
+	}
+	.articleDetailsBlock .articleRating .rating{
+		font-size: 100%;
+	}
+	.articleDetailsBlock .articleName{
+		padding-top: 5px;
+		text-align: center;
+		font-size: 70%;
+	}
+	.articleDetailsBlock .articleViews{
+		padding-top: 5px;
+		height: 100%;
+		width: 100%;
+		background: url('/img/eye-small.png') no-repeat 5% 45%;
+	}
+	.articleDetailsBlock .articleViews span{
+		margin-left: 24px;
+		font-size: 85%;
+	}
+	.articleDetailsBlock .articleDate {
+		background-image: none;
+	}
+	.articleDetailsBlock .articleDate span{
+		font-size: 85%;
+		margin-left: 7px;
+	}
+	.articleGriddedThumb{
+		min-height:65px;
+	}
+	.articleGriddedThumb img{
+		width: 90%;
+		margin: 0 5%;
+	}
+	.articleListAuthorLabel{
+		margin: 0px 0px 0px;
+		 font-size: 70%;
+		 line-height:1.1em;
+	}
+	.articleListAuthor{
+		margin: 0px; line-height: 1.1em; font-size: 80%
+	}
+	.articleListAuthor .author{
+		color:#3c3c3c;
+		font-weight:bold;
+	}
+
+}
+
+*/
+@media (min-width: 980px) {
+	.articleDetailsBlock{
+		width: 100%;
+	}
+	.articleDetailsBlock .articleName{
+		padding-top: 5px;
+		text-align: center;
+		font-size: 80%;
+	}
+	.articleDetailsBlock .articleViews div{
+		padding-left: 35px;
+		font-size: 85%;
+		display: block;
+	}
+	.articleDetailsBlock .articleDate div{
+		font-size: 80%;
+		padding-left: 35px;
+		display: block;
+	}
+
+	.articleDetailsUserThumb img {
+		width: 90%;
+		margin: 5px 5% 0 5%;
+	}
+}
+
+.articleName a {
+	color: #FFF;
+}
+
+/*@media (min-width: 1200px) {
+	.articleDetailsUserThumb img {
+		width: 70%;
+		margin: 5px 15% 0 15%;
+	}
+	.articleDetailsBlock .articleName{
+		padding-top: 5px;
+		text-align: center;
+		font-size: 100%;
+	}
+	.articleDetailsBlock .articleViews span{
+		margin-left: 45px;
+		font-size: 90%;
+	}
+	.articleDetailsBlock .articleDate span{
+		font-size: 90%;
+		margin-left: 40px;
+	}
+	.articleGriddedThumb{
+	min-height:155px;
+	}
+}*/
+

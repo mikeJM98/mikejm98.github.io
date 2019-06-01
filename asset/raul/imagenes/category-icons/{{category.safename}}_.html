@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flite Test</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+          integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700,800">
+    <link rel="stylesheet" href="/alexa/css/jasny-bootstrap.min.css">
+    <link rel="stylesheet" href="/alexa/css/magnific-popup.css">
+    
+	
+    <link rel="stylesheet" href="/alexa/css/flitetest.css?=08-52">
+    <link rel="apple-touch-icon" sizes="180x180" href="/alexa/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/alexa/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/alexa/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/alexa/favicons/manifest.json">
+    <link rel="mask-icon" href="/alexa/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/alexa/favicons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="FliteTest">
+    <meta name="application-name" content="FliteTest">
+    <meta name="msapplication-config" content="/alexa/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+        <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body ng-app="flitetest">
+
+
+<nav id="mobile-nav" class="navbar mobile-nav navmenu navmenu-fixed-left offcanvas" role="navigation">
+    <div class="container-fluid">
+        <ul class="nav navmenu-nav navbar-nav">
+            <li><a title="Home" href="/">Home</a></li>
+            <li><a title="Show" href="/show">Show</a></li>
+            <li class="dropdown" >
+                <a title="Articles" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Articles <span
+                            class="caret"></span></a>
+                <ul class="dropdown-menu navmenu-nav">
+                    <li><a href="/articles" title="All Articles">ALL CATEGORIES</a></li>
+                    <li><a href="/planes" title="Planes">PLANES</a></li>
+                    <li><a href="/multi-rotor" title="Multi Rotor">MULTI ROTOR</a></li>
+                    <li><a href="/helicopters" title="Helicopters">HELICOPTERS</a></li>
+                    <li><a href="/fpv" title="FPV">FPV</a></li>
+                    <li><a href="/scratch-builds" title="Scratch Builds">SCRATCH BUILDS</a></li>
+                    <li><a href="/workbench" title="Workbench">WORKBENCH</a></li>
+                    <li><a href="/news" title="News">NEWS</a></li>
+                    <li><a href="/articles#/cats=ft-articles&listSort=date_high_to_low" title="FT Articles">FT
+                            ARTICLES</a></li>
+                </ul>
+            </li>
+            <li><a title="Store" href="//store.flitetest.com" target="_blank">Store</a></li>
+            <li><a title="Get Started"
+                                                                              href="/getting-started">Get Started</a>
+            </li>
+            <li><a title="Podcasts"
+                                                                           href="/podcasts">Podcasts</a></li>
+            <li><a title="Forum" href="http://forum.flitetest.com/" target="_blank">Forum</a></li>
+            <li><a title="Education" href="https://www.ftstem.com" target="_blank">Education</a></li>
+                    </ul>
+        <form action="/search" method="get" class="navbar-form site-search">
+            <div class="form-group">
+                <div class="input-group">
+                    <input name="q" type="text" class="form-control" placeholder="Search this site...">
+                    <span class="input-group-btn">
+                            <button type="submit" class="btn btn-red"><i class="fa fa-fw fa-search"
+                                                                         aria-hidden="true"></i></button>
+                        </span>
+                </div>
+            </div>
+        </form>
+        <ul class="social-links">
+            <li><a target="_blank" title="Facebook" href="//www.facebook.com/flitetest"><i
+                            class="fa fa-fw fa-facebook-official"></i></a></li>
+            <li><a target="_blank" title="YouTube" href="//www.youtube.com/user/flitetest/featured"><i
+                            class="fa fa-fw fa-youtube"></i></a></li>
+            <li><a target="_blank" title="Twitter" href="//twitter.com/FliteTest"><i
+                            class="fa fa-fw fa-twitter"></i></a></li>
+            <li><a target="_blank" title="Instagram" href="//instagram.com/flitetest"><i
+                            class="fa fa-fw fa-instagram"></i></a></li>
+            <li><a target="_blank" title="Google+" href="//plus.google.com/+FlitetestHQ/"><i
+                            class="fa fa-fw fa-google-plus"></i></a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<header id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-md-offset-3">
+                <div class="account-bar">
+
+                                            <div class="hidden-xs hidden-sm">
+                            <p>Already a member?
+                                <a href="/users/login" title="Member Log-In"><i class="fa fa-fw fa-sign-in"></i> Log-In</a>
+                                &nbsp;or
+                                <a href="/me/register" title="Register Now">Register Now</a>
+                            </p>
+                        </div>
+                        <div class="hidden-md hidden-lg">
+                            <a href="/users/login" title="Member Log-In" class="btn btn-red border">Member Log-In</a>
+                            <a href="/me/register" title="Register Now" class="btn btn-red border">Register Now</a>
+                        </div>
+                    
+                </div>
+                <div class="row hidden-xs hidden-sm">
+                    <div class="col-md-7 col-lg-8">
+                        <ul class="social-links">
+                            <li><a target="_blank" title="Facebook" href="//www.facebook.com/flitetest"><i
+                                            class="fa fa-fw fa-facebook-official"></i></a></li>
+                            <li><a target="_blank" title="YouTube" href="//www.youtube.com/user/flitetest/featured"><i
+                                            class="fa fa-fw fa-youtube"></i></a></li>
+                            <li><a target="_blank" title="Twitter" href="//twitter.com/FliteTest"><i
+                                            class="fa fa-fw fa-twitter"></i></a></li>
+                            <li><a target="_blank" title="Instagram" href="//instagram.com/flitetest"><i
+                                            class="fa fa-fw fa-instagram"></i></a></li>
+                            <li><a target="_blank" title="Google+" href="//plus.google.com/+FlitetestHQ/"><i
+                                            class="fa fa-fw fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5 col-lg-4">
+                        <form action="/search" method="get" class="site-search">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input name="q" type="text" class="form-control" placeholder="Search this site...">
+                                    <span class="input-group-btn">
+                                            <button type="submit" class="btn btn-black"><i class="fa fa-fw fa-search"
+                                                                                           aria-hidden="true"></i></button>
+                                        </span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div><!--/.col-->
+        </div><!--/.row-->
+    </div><!--/.container-->
+        <div class="navtop">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 relative">
+                    <a class="logo" title="Home" href="/">
+                        <img alt="Flite Test Logo" src="/alexa/images/flite-test-logo.png">
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <nav class="navbar">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="offcanvas"
+                                    data-target="#mobile-nav" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle Navigation</span>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                            </button>
+                                                            <a href="/users/login" title="Member Log-In" class="navbar-btn log-in"><i
+                                            class="fa fa-sign-in"></i></a>
+                                                    </div>
+                        <div id="navbar" class="navbar-collapse collapse hidden-md hidden-lg">
+                            <ul class="nav navmenu-nav navbar-right">
+                                <li><a title="Home"
+                                                                                           href="/">Home</a></li>
+                                <li><a title="Show" href="/show">Show</a>
+                                </li>
+                                <li><a title="Articles"
+                                                                                               href="/articles">Articles</a>
+                                </li>
+                                <li><a title="Store" href="//store.flitetest.com" target="_blank">Store</a></li>
+                                <li><a title="Get Started"
+                                                                                                  href="/getting-started">Get
+                                        Started</a></li>
+                                <li><a title="Podcasts"
+                                                                                               href="/podcasts">Podcasts</a>
+                                </li>
+                                <li><a title="Forum" href="http://forum.flitetest.com/"
+                                       target="_blank">Forum</a></li>
+                                <li><a title="Education" href="https://www.ftstem.com"
+                                       target="_blank">Education</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </div><!--/.nav-top-->
+    </header>
+
+
+    <div id="about-us" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-heading">404: Page Not Found</h1>
+                <p class="section-heading-byline">Either you cannot type or we broke something.</p>
+            </div>
+            <div class="section-content">
+
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+			            	<h3>Try searching for your content.</h3>
+			            	<form action="/search" method="get" class="site-search">
+		                    <div class="form-group">
+		                        <div class="input-group">
+		                            <input name="q" type="text" class="form-control" placeholder="Search this site...">
+		                            <span class="input-group-btn">
+		                                <button type="submit" class="btn btn-black"><i class="fa fa-fw fa-search" aria-hidden="true"></i></button>
+		                            </span>
+		                        </div>
+		                    </div>
+		                </form>
+		            </div>
+		        </div>
+
+            </div>
+            <div class="section-footer"></div>
+        </div>
+    </div>
+
+
+<div id="brand-bar" class="brand-bar">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-4">
+                <a target="_blank" href="http://flitefest.com/" class="touch-hover brand-link">
+                    <img alt="Flite Fest Website" class="cover" src="https://s3.amazonaws.com/assets.flitetest.com/img/homep_link_FliteFestBW.jpg">
+                    <img alt="Flite Fest Website" src="https://s3.amazonaws.com/assets.flitetest.com/img/homep_link_FliteFestClr.jpg">
+                </a>
+            </div>
+
+            <div class="col-sm-4">
+                <a target="_blank" href="https://www.ftstem.com" class="touch-hover brand-link">
+                    <img alt="FliteTest Stem Website" class="cover" src="https://s3.amazonaws.com/assets.flitetest.com/img/homep_link_StemBw.jpg">
+                    <img alt="FliteTest Stem Website" src="https://s3.amazonaws.com/assets.flitetest.com/img/homep_link_StemClr.jpg">
+                </a>
+            </div>
+
+            <div class="col-sm-4">
+                <a target="_blank" href="http://www.ftgroups.com/" class="touch-hover brand-link">
+                    <img alt="FliteTest Groups Website" class="cover" src="https://s3.amazonaws.com/assets.flitetest.com/img/homep_link_GroupsBw.jpg">
+                    <img alt="FliteTest Groups Website" src="https://s3.amazonaws.com/assets.flitetest.com/img/homep_link_GroupsClr.jpg">
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="container">
+
+        <div class="col-sm-6 col-md-3">
+            <div class="footer-block link-list">
+                <h3 class="footer-heading">Meet Flite Test</h3>
+                                <ul>
+                    <li><a href="/about_us" title="About Us">About Us</a></li>
+                    <li><a href="/pages/privacy-policy" title="Privacy Policy">Privacy Policy</a></li>
+                    <li><a href="/terms-of-use" title="Terms of Use">Terms of Use</a></li>
+                    <li><a href="/partnerships" title="Advertising &amp; Sponsorships">Advertising &amp;
+                            Sponsorships</a></li>
+                    <!-- <li><a target="_blank" href="" title="Podcast Voicemail">Podcast Voicemail</a></li> //speakpipe -->
+                    <!-- <li><a href="/newsletter" title="Newsletter">Newsletter</a></li> -->
+                    <li><a target="_blank" href="http://flitefest.com/" title="FLITE FEST" style="font-weight: 700;text-decoration: none;">FLITE FEST</a></li>
+                    <li><a target="_blank" href="https://www.ftstem.com" title="FT STEM" style="font-weight: 700;text-decoration: none;">FLITETEST STEM</a></li>
+                    <li><a target="_blank" href="http://www.ftgroups.com/" title="FT GROUPS" style="font-weight: 700;text-decoration: none;">FLITETEST GROUPS</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-md-offset-1">
+            <div class="footer-block link-list">
+                <h3 class="footer-heading">Need Help?</h3>
+                                <ul>
+                    <li><a href="/support" title="Support">Support</a></li>
+                    <li><a href="/pages/contact" title="Contact Us">Contact Us</a></li>
+                    <li><a href="/articles#/textSearch=FTScratchBuild" title="Build Plans">Build Plans</a></li>
+                    <li><a href="/articles#/textSearch=Series:%20beginner%20series" title="Beginner Series">Beginner Series</a></li>
+					<li><a target="_blank" href="/repairs" title="Repairs">Repairs</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="clearfix visible-sm-block"></div>
+
+        <div class="col-md-4 col-md-offset-1">
+            <div class="row">
+                <div class="col-sm-6 col-md-12">
+
+                    <div class="footer-block social">
+                        <h3 class="footer-heading">Connect With Us</h3>
+                        <ul class="social-links">
+                            <li><a target="_blank" title="Facebook" href="//www.facebook.com/flitetest"><i
+                                            class="fa fa-fw fa-facebook-official"></i></a></li>
+                            <li><a target="_blank" title="YouTube" href="//www.youtube.com/user/flitetest/featured"><i
+                                            class="fa fa-fw fa-youtube"></i></a></li>
+                            <li><a target="_blank" title="Twitter" href="//twitter.com/FliteTest"><i
+                                            class="fa fa-fw fa-twitter"></i></a></li>
+                            <li><a target="_blank" title="Instagram" href="//instagram.com/flitetest"><i
+                                            class="fa fa-fw fa-instagram"></i></a></li>
+                            <li><a target="_blank" title="Google+" href="//plus.google.com/+FlitetestHQ/"><i
+                                            class="fa fa-fw fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-sm-6 col-md-12">
+
+
+                    <div class="footer-block subscribe">
+                        <h3 class="footer-heading">Subscribe</h3>
+                        <p class="absent">By joining our mailing list via the home page or during checkout, you agree to
+                            receive periodic yet meaningful email contacts from us and us alone</p>
+							<!-- Newsletter widget -->
+								<!-- Begin MailChimp Signup Form -->
+								<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+								<style type="text/css">
+									#mc_embed_signup{background:#000; clear:left; font:14px Helvetica,Arial,sans-serif;}
+									#mc_embed_signup form{padding: 0px; }
+									#mc_embed_signup .button{width:100%; height:46px; background-color:#8f1d21;border-radius: 1px;}
+									#mc_embed_signup .button:hover{background-color:#650f12;}
+									#mc_embed_signup input {width:100%; border-radius: 0px;font-size: 16px;color: #333333;}
+									#mc_embed_signup .mc-field-group {width:100%;}
+									/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+									   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+								</style>
+								<div id="mc_embed_signup">
+								<form action="https://flavors.us9.list-manage.com/subscribe/post?u=41ac11a4ea3b454f67be43f84&amp;id=4d2c6f0cbd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+									<div id="mc_embed_signup_scroll">
+									
+								<div class="mc-field-group">
+									<input type="email" value="" placeholder="email" name="EMAIL" class="required email" id="mce-EMAIL">
+								</div>
+									<div id="mce-responses" class="clear">
+										<div class="response" id="mce-error-response" style="display:none"></div>
+										<div class="response" id="mce-success-response" style="display:none"></div>
+									</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+									<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_41ac11a4ea3b454f67be43f84_4d2c6f0cbd" tabindex="-1" value=""></div>
+									<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+									</div>
+								</form>
+								</div>
+								<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='COMPANY';ftypes[3]='text';fnames[4]='ADDRESS';ftypes[4]='address';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+								<!--End mc_embed_signup-->
+					</div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <p class="copyright">Copyright &copy;2019 Flite Test. All rights reserved.</p>
+        </div>
+
+    </div>
+</footer>
+    <div class="modal" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="section-header">
+                        <h2 class="section-heading">Log-In</h2>
+                        <p class="section-heading-byline">Get access to additional features and goodies.</p>
+                    </div>
+                    <div class="section-content">
+
+                        
+                        <p style="text-align: center;"><a href="https://store.flitetest.com/account/login" target="_blank">Looking for your store account?</a></p>
+                                                <form class="form" action="/users/login?r=/alexa/images/category-icons/{{category.safename}}~.png" method="POST">
+
+                            <div class="form-group" id="usernameGroup">
+                                <label class="control-label">Username</label>
+                                <div class="controls">
+                                    <input class="form-control" type="text" id="username" placeholder="Username" name="username" value="">
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="passwordGroup">
+                                <label class="control-label">Password</label>
+                                <div class="controls">
+                                    <input class="form-control" type="password" id="password" placeholder="Password" name="password">
+                                </div>
+                            </div>
+
+                            <div class="checkbox" id="rememberMe" style="text-align: right;">
+                                <label>
+                                    <input type="checkbox" name="remember_me"> Remember Me
+                                </label>
+                            </div>
+
+                            <div class="form-actions">
+                                <button class="btn btn-red">Log-in</button>
+                                &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
+                                <a href="javascript:;" onclick="fbLogin()"><img src="/img/fblogin.png" style="height: 32px"></a>
+                            </div>
+
+                            <hr>
+
+                            <p><a href="/users/forgot_password">Forgot Your Password?</a></p>
+
+                            
+                            <p>Don't have an account? <a href="/me/register?r=/alexa/images/category-icons/{{category.safename}}~.png">Create An Account Here</a>
+
+                        </form>
+
+                    </div>
+                </div><!--/.modal-body-->
+            </div>
+        </div>
+    </div>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="/alexa/js/jasny-bootstrap.min.js"></script>
+<script src="/alexa/js/magnific-popup-min.js"></script>
+<script src="/alexa/js/flitetest.js"></script>
+
+
+<script src="/alexa/js/angular.js"></script>
+<script src="/alexa/js/angular-resource.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-sanitize.js"></script>
+<script src="/js/app.js"></script>
+
+
+
+	
+
+
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-25086582-1']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://' : '//') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+<div id="fb-root"></div>
+<script>
+    var articleTypes = {"just-fun":{"_id":"5101ffa732d9bf2206001cda","safename":"just-fun","name":"Just Fun"},"projects":{"_id":"5101ffa732d9bf2206001cdb","safename":"projects","name":"Projects"},"reviews":{"_id":"5101ffa732d9bf2206001cdc","safename":"reviews","name":"Reviews"},"tips":{"_id":"5101ffa732d9bf2206001cdd","safename":"tips","name":"Tips"},"challenges":{"_id":"5101ffa732d9bf2206001cde","safename":"challenges","name":"Challenges"},"news":{"_id":"5101ffa732d9bf2206001cdf","safename":"news","name":"News"},"how-to":{"_id":"510fff1c779f8cedd9f17972","safename":"how-to","name":"How To"},"podcasts":{"_id":"523a001de4b0c56171fd49eb","safename":"podcasts","name":"Podcasts"}};
+    var articleCategories = {"fpv":{"_id":"5101ffa732d9bf2206001ce0","safename":"fpv","name":"FPV"},"scratch-builds":{"_id":"5101ffa732d9bf2206001ce1","safename":"scratch-builds","name":"Scratch Builds"},"multi-rotor":{"_id":"5101ffa732d9bf2206001ce2","safename":"multi-rotor","name":"Multi Rotor"},"planes":{"_id":"5101ffa732d9bf2206001ce3","safename":"planes","name":"Planes"},"workbench":{"_id":"5101ffa732d9bf2206001ce4","safename":"workbench","name":"Workbench"},"helicopters":{"_id":"5101ffa732d9bf2206001ce5","safename":"helicopters","name":"Helicopters"}};
+    var _id = false;
+    var fbIsReady = false;
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '262544150534779', // App ID from config
+            channelUrl: '//www.flitetest.com/channel.php', // Channel File
+            status: true, // check login status
+            cookie: true, // enable cookies to allow the server to access the session
+            xfbml: true  // parse XFBML
+        });
+        fbIsReady = true;
+    };
+
+    // Load the SDK Asynchronously
+    (function (d) {
+        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement('script');
+        js.id = id;
+        js.async = true;
+        js.src = "//connect.facebook.net/en_US/all.js";
+        ref.parentNode.insertBefore(js, ref);
+    }(document));
+
+    function fbReady(func_name) {
+        var thisInt = setInterval(function () {
+            if (fbIsReady) {
+                clearInterval(thisInt);
+                func_name();
+            }
+        }, 100);
+    }
+
+    $().ready(function () {
+        $("a").on('click', function () {
+            if ($(this).attr('href').indexOf('shop.flitetest.com') != -1) {
+                if (allowPinnacleStoreLinks == true) { //for support page links to store
+                    return true;
+                }
+                splitUrl = $(this).attr('href').split('/');
+                splitCount = splitUrl.length;
+                lastElem = splitUrl[splitCount - 1];
+                if (lastElem == '') {
+                    lastElem = splitUrl[splitCount - 2];
+                }
+                window.location = "//store.flitetest.com/" + lastElem;
+                return false;
+            }
+        })
+    })
+</script>
+
+
+
+
+</body>
+</html>
